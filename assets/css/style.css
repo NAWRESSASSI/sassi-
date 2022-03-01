@@ -1,0 +1,21 @@
+.mydiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+#visible{
+   height: 25px;
+}
+table
+{
+    border: medium solid rgb(73,146,253);
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    
+} 
+.mytable
+{
+    border: 1px solid rgb(73,146,253);
+    width: 50%;
+}
