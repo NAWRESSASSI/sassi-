@@ -20,7 +20,7 @@ include_once 'controller/ControllerAnnonce.php';
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
+    <a class="navbar-brand" href="#">L'IMMOBILER D AMIENS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,19 +49,21 @@ include_once 'controller/ControllerAnnonce.php';
 
         <thead>
             <tr>
-                <td>titre</td>
-                <td>description</td>
-                <td>code postale</td>
-                <td>ville</td>
-                <td>type</td>
-                <td>price</td>
-                <td>reservation_message</td>
+                <th>id</th>
+                <th >titre</th>
+                <th>description</th>
+                <th>code postale</th>
+                <th>ville</th>
+                <th>type</th>
+                <th>price</th>
+                <th>reservation_message</th>
             </tr>
         </thead>
        <TBody>
             <?php
                  foreach($AnnonceList as $annonce) {?>
                     <tr class="mytable">
+                       <td class="mytable" ><?= $annonce['id']?></td>
                         <td class="mytable" style="text-transform: uppercase"><?= $annonce['title']?></td>
                         <td class="mytable"><?= $annonce['description']?></td>
                         <td class="mytable"><?= $annonce['postal_code']?></td> 

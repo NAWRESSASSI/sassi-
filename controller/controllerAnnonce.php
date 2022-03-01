@@ -65,25 +65,17 @@
           } 
 
           if (!empty($_POST['reservation_message'])){
-            if (preg_match($RX_ADRESS, $_POST['reservation_message'])){
+           
               $annonce->reservation_message = $_POST['reservation_message'];
             }else{
               $error['reservation_message'] = "veuillez saisir un message valide"; 
             }
-          }else{
-            $error['reservation_message'] = "veuillez saisir un message ";
-          } 
+        
+           
           var_dump($error);
          if (empty($error) && isset($_POST['submit'])){
                            
-                        var_dump($annonce->createAnnonce());}
+                        $annonce->createAnnonce();}
                        //header('location: posts.php');
-                    // }elseif( isset($_POST['update'])){
-                    
-                    //     $annonce->id=$_GET['id'];
-                    //    $updatPost= $annonce->UpdatePost();
-                    //    if($updatPost){
-                    //      header('location:posts.php');
-                    //    }
-                    //   }
+                  
     } 

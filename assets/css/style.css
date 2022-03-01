@@ -9,13 +9,14 @@
 table
 {
     border: medium solid rgb(73,146,253);
-    width: 50%;
+    width:800px ;
     margin: auto;
     margin-top: 20px;
     
 } 
-.mytable
+td,th
 {
-    border: 1px solid rgb(73,146,253);
-    width: 50%;
+    border: 1px solid rgb(9, 89, 209);
+    text-align: center;
+    color:black
 }

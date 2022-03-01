@@ -18,7 +18,7 @@ class annonces extends database {
     }
 
     public function createAnnonce(){
-        $request = 'INSERT INTO advert (title,description,postal_code,city,type,price,reservation_message) 
+        $request = 'INSERT INTO advert (,title,description,postal_code,city,type,price,reservation_message) 
                     VALUES (:title,:description ,:postal_code,:city,:type,:price,:reservation_message)';
         $statement = $this->db->prepare($request);
         $statement->bindValue(':title', $this->title, PDO::PARAM_STR);
@@ -27,7 +27,7 @@ class annonces extends database {
         $statement->bindValue(':city',$this->city,PDO::PARAM_STR);
         $statement->bindValue(':type',$this->type,PDO::PARAM_STR);
         $statement->bindValue(':price',$this->price,PDO::PARAM_INT);
-        $statement->bindValue(':reservation_message',$this->reservation_message,PDO::PARAM_INT);
+        $statement->bindValue(':reservation_message',$this->reservation_message,PDO::PARAM_STR);
         return $statement->execute();
     }
     public function get15annonces(){
